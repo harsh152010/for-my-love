@@ -1,0 +1,155 @@
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh; /* This is necessary */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffeaea;
+  flex-direction: column;
+}
+
+.container{
+    height: 80%;
+    width: 90%;
+    
+}
+.topline{
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    color: #5c0000;
+    font-size: 32px;
+    margin-top: 20px;
+}
+h1{
+    text-align: center;
+    color: #5c0000;
+    font-size: 64px;
+    font-family: 'Dancing Script', cursive;
+    margin-bottom: 30px;
+}
+.buttomline{
+    font-size: 28px;
+    text-align: center;
+    color: #5c0000; 
+    font-family: 'Merriweather', serif;   
+}
+.heart{
+    height: auto;
+    width: 100%;
+    font-size: 200px;
+    text-align: center;
+}
+.button1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+}
+button {
+    font-family: 'Poppins', sans-serif;
+    font-size: 22px;
+    padding: 10px 20px;
+    margin-top: 30px;
+    border: 1px solid #5c0000;
+    background-color: #ffeaea;
+    color: #5c0000;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.footer {
+  text-align: center;
+  margin-top: 45px; /* Space from above content */
+  font-size: 18px;
+  color: #4b0000;
+  font-family: 'Merriweather', serif;
+}
+
+/* For small devices (phones) */
+@media (max-width: 600px) {
+  .topline {
+    font-size: 22px;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+
+  .buttomline {
+    font-size: 18px;
+  }
+
+  .heart {
+    font-size: 100px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 8px 16px;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
+
+/* For medium devices (tablets) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .topline {
+    font-size: 28px;
+  }
+
+  h1 {
+    font-size: 52px;
+  }
+
+  .buttomline {
+    font-size: 24px;
+  }
+
+  .heart {
+    font-size: 130px;
+  }
+
+  button {
+    font-size: 20px;
+    padding: 10px 18px;
+  }
+
+  .footer {
+    font-size: 16px;
+  }
+}
+
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.heart {
+  font-size: 150px;
+  text-align: center;
+  animation: heartbeat 1s infinite;
+}
+
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+button:hover {
+  animation: pulse 0.5s ease-in-out;
+}
